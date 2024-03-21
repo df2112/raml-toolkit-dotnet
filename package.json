@@ -1,5 +1,5 @@
 {
-  "name": "@commerce-apps/raml-toolkit",
+  "name": "raml-toolkit-dotnet",
   "version": "0.5.11",
   "description": "",
   "keywords": [
@@ -32,8 +32,6 @@
     "lint:ci": "eslint . --ext .ts --quiet",
     "prepack": "npm run clean && npm run compile && oclif-dev manifest && oclif-dev readme",
     "postpack": "rm -f oclif.manifest.json",
-    "prepare": "npm run snyk-protect",
-    "snyk-protect": "snyk protect",
     "pretest": "npm run lint && npm run compile && npm run depcheck",
     "test": "npm run cover:unit && npm run test:resource",
     "pretest:ci": "npm run lint:ci && npm run compile && npm run depcheck",
@@ -101,7 +99,6 @@
     "nyc": "^15.1.0",
     "prettier": "^2.5.1",
     "sinon": "^9.2.4",
-    "snyk": "^1.836.0",
     "sort-package-json": "^1.53.1",
     "tslib": "^1.14.1",
     "typescript": "^3.9.7"
@@ -112,6 +109,5 @@
   "oclif": {
     "bin": "raml-toolkit",
     "commands": "./lib/commands"
-  },
-  "snyk": true
+  }
 }
